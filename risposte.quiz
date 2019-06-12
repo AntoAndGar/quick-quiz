@@ -30,7 +30,7 @@
   - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘0’
   * Rappresenta le stringhe come array di caratteri terminate dal carattere '\0'
 
-6)Quale delle seguenti affermazioni e' vera?
+96)Quale delle seguenti affermazioni e' vera?
   - Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU
   - Tutte le opzioni sono false
   - Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80
@@ -569,4 +569,11 @@
   - var=$(cat nomefile); for riga in ${var}; do echo $riga | wc -c; done
   * Nessuna delle altre affermazioni e' corretta
   - for riga in `cat nomefile`; do echo $riga | wc -c; done
+
+6)Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola error per gli errori veri e propri, e con error warning per i semplici warning (è garantito che la stringa error warning non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?
+  - grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'
+  - Nessuna delle altre opzioni è corretta
+  * grep -E '^error' nomefile | grep -v warning
+  - grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile
+
 

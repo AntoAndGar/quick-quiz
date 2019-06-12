@@ -67,16 +67,16 @@
     },
     {
       "answers": [
-        "Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU",
-        "Tutte le opzioni sono false",
-        "Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80",
-        "Richard Stallman ha descritto per primo la licenza GPL"
+        "grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'",
+        "Nessuna delle altre opzioni \u00e8 corretta",
+        "grep -E '^error' nomefile | grep -v warning",
+        "grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile"
       ],
       "correct": {
-        "index": 3
+        "index": 2
       },
       "number": 6,
-      "prompt": "Quale delle seguenti affermazioni e' vera?"
+      "prompt": "Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola error per gli errori veri e propri, e con error warning per i semplici warning (\u00e8 garantito che la stringa error warning non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?"
     },
     {
       "answers": [
@@ -1091,6 +1091,19 @@
       },
       "number": 94,
       "prompt": "Quale delle seguenti affermazioni sui processi Linux e' vera?"
+    },
+    {
+      "answers": [
+        "Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU",
+        "Tutte le opzioni sono false",
+        "Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80",
+        "Richard Stallman ha descritto per primo la licenza GPL"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 96,
+      "prompt": "Quale delle seguenti affermazioni e' vera?"
     }
   ],
   "title": "Quanto non lo passiamo SO?",
