@@ -639,7 +639,7 @@
     },
     {
       "answers": [
-        "Il comando type file mostra il tipo del file file (regolare, directory, etc)",
+        "Il comando type file mostra il tipo del file (file regolare, directory, etc)",
         "Il comando whoami mostra lo username dell'utente attualmente loggato nel terminale in cui viene digitato il comando (potrebbe non coincidere con l'utente che ha effettuato il login grafico)",
         "Il comando id pu\u00f2 essere usato per visualizzare i gruppi cui un utente appartiene",
         "Il comando which cmd mostra qual e' il file eseguibile che viene eseguito quando si lancia il comando cmd, ma solo per i comandi che non sono builtin"
@@ -1019,7 +1019,7 @@
         "Il client deve sempre chiamare la syscall bind",
         "Il server deve chiamare la syscall connect",
         "Il client deve sempre chiamare la syscall listen",
-        "Sia il client che il server devono semore chiamare la syscall socket"
+        "Sia il client che il server devono sempre chiamare la syscall socket"
       ],
       "correct": {
         "index": 3

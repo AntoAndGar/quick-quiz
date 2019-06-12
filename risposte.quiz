@@ -1,40 +1,40 @@
 # Quanto non lo passiamo SO?
 
-91)Quale delle seguenti affermazioni sui processi Linux e' falsa?
-  - In un determinato istante, non possono esserci 2 processi distinti con lo stesso PID
-  * Per creare i PID dei processi si usano dei numeri interi che crescono sempre
-  - In istanti diversi, possono esserci 2 processi distinti con lo stesso PID
-  - Ogni processo puo' conoscere il suo PID
+1)Quale delle seguenti affermazioni è vera?
+  - È possibile stampare esclusivamente le ultime N righe di un file di testo con il comando cat -N -6
+  - Il comando tail -c /var/log/maillog stampa in maniera continua le ultime righe del file /var/log/maillog
+  - Il comando cut consente di tagliare un file in gruppi di righe contigue in base ad un carattere di spaziatura
+  * Nessuna delle altre opzioni è vera
 
-92)Quale delle seguenti affermazioni sui processi Linux e' vera?
-  - Normalmente, il processo figlio, una volta terminata la sua computazione, attende, con una chiamata alla syscall wait, che il padre termini e gli restituisca il suo exit status
-  - Un processo diventa zombie se termina prima di almeno uno dei processi che abbia eventualmente creato
-  - Ogni processo può conoscere il proprio PID, ma non quello del processo che l'ha creato
-  * Con l'eccezione del primo processo, tutti i processi sono creati con una fork effettuata da un altro processo in esecuzione
+2)Si consideri il comando: find / \( -name 'Doc*' -a -type d \) -o -newer Documenti -exec touch '{}' \;?
+  - Il comando modifica tutti i tempi (atime, mtime e ctime) delle directory il cui nome comincia con Doc, e fa lo stesso anche con tutti i file e/o directory che siano stati modificati più recentemente della directory Documenti
+  * Nessuna delle altre opzioni è vera
+  - Il comando modifica tutti i tempi (atime, mtime e ctime) delle directory il cui nome comincia con Doc, e fa lo stesso anche con tutti i file regolari che siano stati modificati più recentemente della directory Documenti
+  - Il comando modifica tutti i tempi (atime, mtime e ctime) di tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente della directory Documenti
+ 
+3)Quale delle seguenti affermazioni sul comando time è falsa?
+  - Il comando /usr/bin/time cmd ha anche l'effetto di eseguire il comando cmd
+  - Il comando time cmd, eseguito dalla bash, non può essere usato per mostrare l'uso di RAM fatto da cmd
+  * Il comando /usr/bin/time cmd non può essere usato per mostrare l'uso di RAM fatto da cmd
+  - Esistono 2 comandi time: uno è una keyword della bash e l'altro corrisponde ad un file eseguibile (solitamente /usr/bin/time) 
+ 
+4)Nell'albero di directory radicato nella directory corrente di una shell bash ci sono molteplici file di testo, ognuno dei quali contiene il log di una esecuzione di un comando. La prima riga di ogni log riporta esattamente il comando usato per ottenere il log stesso, opzioni ed argomenti compresi. Volendo sapere quali sono i diversi comandi (opzioni ed argomenti esclusi; il comando non contiene mai spazi ed è sempre all'inizio della riga) usati nei vari file di log, quale dei seguenti comandi bash è sbagliato?
+  - "awk 'FNR == 1{print $1}' `find . -type f` | sort | uniq"
+  - for file in `find . -type f`; do awk 'FNR == 1{print $1}' $file; done | sort | uniq
+  * for file in `find . -type f`; do head -1 $file | awk '{print $1}' | sort | uniq; done
+  - for file in `find . -type f`; do head -1 $file | awk '{print $1}'; done | sort | uniq
 
-93)Quale delle seguenti affermazioni sui processi Linux e' falsa?
-  * Digitare un comando sulla shell genera sempre un nuovo processo
-  - Esistono file che non possono essere eseguiti per diventare processi
-  - Affinché un file possa diventare un processo e' necessario che abbia i permessi di esecuzione
-  - Qualsiasi computazione eseguita dal sistema operativo e' contenuta dentro un qualche processo
+5)Quale dei seguenti comandi Bash permette di scrivere il numero di caratteri di ogni singola riga di un file di testo nomefile?
+  - for riga in "`cat nomefile`"; do echo $riga | wc -c; done
+  - var=$(cat nomefile); for riga in ${var}; do echo $riga | wc -c; done
+  * Nessuna delle altre affermazioni e' corretta
+  - for riga in `cat nomefile`; do echo $riga | wc -c; done
 
-94)Quale delle seguenti affermazioni sui processi Linux e' vera?
-  * Eseguendo k volte un file eseguibile, si generano k diversi processi
-  - Per poter lanciare un file eseguibile, e' prima necessario aspettare che il comando precedente sia terminato
-  - Tutti i processi sono sempre in stato di RUNNING
-  - Un processo e' sempre un'istanza di uno script bash
-
-95)Un programma scritto in linguaggio C:
-  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘\n’
-  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘^M’
-  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘0’
-  * Rappresenta le stringhe come array di caratteri terminate dal carattere '\0'
-
-96)Quale delle seguenti affermazioni e' vera?
-  - Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU
-  - Tutte le opzioni sono false
-  - Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80
-  * Richard Stallman ha descritto per primo la licenza GPL
+6)Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola error per gli errori veri e propri, e con error warning per i semplici warning (è garantito che la stringa error warning non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?
+  - grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'
+  - Nessuna delle altre opzioni è corretta
+  * grep -E '^error' nomefile | grep -v warning
+  - grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile
 
 7)Quali delle seguenti affermazioni e' vera?
   * Nessuna delle opzioni e' vera
@@ -337,7 +337,7 @@
   - Current working directory
 
 57)Quale delle seguenti affermazioni sui comandi della bash e' falsa?
-  * Il comando type file mostra il tipo del file file (regolare, directory, etc)
+  * Il comando type file mostra il tipo del file (file regolare, directory, etc)
   - Il comando whoami mostra lo username dell'utente attualmente loggato nel terminale in cui viene digitato il comando (potrebbe non coincidere con l'utente che ha effettuato il login grafico)
   - Il comando id può essere usato per visualizzare i gruppi cui un utente appartiene
   - Il comando which cmd mostra qual e' il file eseguibile che viene eseguito quando si lancia il comando cmd, ma solo per i comandi che non sono builtin
@@ -532,7 +532,7 @@
   - Il client deve sempre chiamare la syscall bind
   - Il server deve chiamare la syscall connect
   - Il client deve sempre chiamare la syscall listen
-  * Sia il client che il server devono semore chiamare la syscall socket
+  * Sia il client che il server devono sempre chiamare la syscall socket
 
 90)Si supponga di voler scrivere un programma immune al CTRL+C. Quali dei seguenti frammenti di codice realizza quanto detto sopra?
   - signal( SIGTERM, SIG_DFL);
@@ -540,40 +540,39 @@
   * signal( SIGINT, SIG_IGN);
   - Non è possibile essere immuni al CTRL+C
 
-1)Quale delle seguenti affermazioni è vera?
-  - È possibile stampare esclusivamente le ultime N righe di un file di testo con il comando cat -N -6
-  - Il comando tail -c /var/log/maillog stampa in maniera continua le ultime righe del file /var/log/maillog
-  - Il comando cut consente di tagliare un file in gruppi di righe contigue in base ad un carattere di spaziatura
-  * Nessuna delle altre opzioni è vera
+91)Quale delle seguenti affermazioni sui processi Linux e' falsa?
+  - In un determinato istante, non possono esserci 2 processi distinti con lo stesso PID
+  * Per creare i PID dei processi si usano dei numeri interi che crescono sempre
+  - In istanti diversi, possono esserci 2 processi distinti con lo stesso PID
+  - Ogni processo puo' conoscere il suo PID
 
-2)Si consideri il comando: find / \( -name 'Doc*' -a -type d \) -o -newer Documenti -exec touch '{}' \;?
-  - Il comando modifica tutti i tempi (atime, mtime e ctime) delle directory il cui nome comincia con Doc, e fa lo stesso anche con tutti i file e/o directory che siano stati modificati più recentemente della directory Documenti
-  * Nessuna delle altre opzioni è vera
-  - Il comando modifica tutti i tempi (atime, mtime e ctime) delle directory il cui nome comincia con Doc, e fa lo stesso anche con tutti i file regolari che siano stati modificati più recentemente della directory Documenti
-  - Il comando modifica tutti i tempi (atime, mtime e ctime) di tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente della directory Documenti
- 
-3)Quale delle seguenti affermazioni sul comando time è falsa?
-  - Il comando /usr/bin/time cmd ha anche l'effetto di eseguire il comando cmd
-  - Il comando time cmd, eseguito dalla bash, non può essere usato per mostrare l'uso di RAM fatto da cmd
-  * Il comando /usr/bin/time cmd non può essere usato per mostrare l'uso di RAM fatto da cmd
-  - Esistono 2 comandi time: uno è una keyword della bash e l'altro corrisponde ad un file eseguibile (solitamente /usr/bin/time) 
- 
-4)Nell'albero di directory radicato nella directory corrente di una shell bash ci sono molteplici file di testo, ognuno dei quali contiene il log di una esecuzione di un comando. La prima riga di ogni log riporta esattamente il comando usato per ottenere il log stesso, opzioni ed argomenti compresi. Volendo sapere quali sono i diversi comandi (opzioni ed argomenti esclusi; il comando non contiene mai spazi ed è sempre all'inizio della riga) usati nei vari file di log, quale dei seguenti comandi bash è sbagliato?
-  - "awk 'FNR == 1{print $1}' `find . -type f` | sort | uniq"
-  - for file in `find . -type f`; do awk 'FNR == 1{print $1}' $file; done | sort | uniq
-  * for file in `find . -type f`; do head -1 $file | awk '{print $1}' | sort | uniq; done
-  - for file in `find . -type f`; do head -1 $file | awk '{print $1}'; done | sort | uniq
+92)Quale delle seguenti affermazioni sui processi Linux e' vera?
+  - Normalmente, il processo figlio, una volta terminata la sua computazione, attende, con una chiamata alla syscall wait, che il padre termini e gli restituisca il suo exit status
+  - Un processo diventa zombie se termina prima di almeno uno dei processi che abbia eventualmente creato
+  - Ogni processo può conoscere il proprio PID, ma non quello del processo che l'ha creato
+  * Con l'eccezione del primo processo, tutti i processi sono creati con una fork effettuata da un altro processo in esecuzione
 
-5)Quale dei seguenti comandi Bash permette di scrivere il numero di caratteri di ogni singola riga di un file di testo nomefile?
-  - for riga in "`cat nomefile`"; do echo $riga | wc -c; done
-  - var=$(cat nomefile); for riga in ${var}; do echo $riga | wc -c; done
-  * Nessuna delle altre affermazioni e' corretta
-  - for riga in `cat nomefile`; do echo $riga | wc -c; done
+93)Quale delle seguenti affermazioni sui processi Linux e' falsa?
+  * Digitare un comando sulla shell genera sempre un nuovo processo
+  - Esistono file che non possono essere eseguiti per diventare processi
+  - Affinché un file possa diventare un processo e' necessario che abbia i permessi di esecuzione
+  - Qualsiasi computazione eseguita dal sistema operativo e' contenuta dentro un qualche processo
 
-6)Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola error per gli errori veri e propri, e con error warning per i semplici warning (è garantito che la stringa error warning non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?
-  - grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'
-  - Nessuna delle altre opzioni è corretta
-  * grep -E '^error' nomefile | grep -v warning
-  - grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile
+94)Quale delle seguenti affermazioni sui processi Linux e' vera?
+  * Eseguendo k volte un file eseguibile, si generano k diversi processi
+  - Per poter lanciare un file eseguibile, e' prima necessario aspettare che il comando precedente sia terminato
+  - Tutti i processi sono sempre in stato di RUNNING
+  - Un processo e' sempre un'istanza di uno script bash
 
+95)Un programma scritto in linguaggio C:
+  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘\n’
+  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘^M’
+  - Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘0’
+  * Rappresenta le stringhe come array di caratteri terminate dal carattere '\0'
+
+96)Quale delle seguenti affermazioni e' vera?
+  - Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU
+  - Tutte le opzioni sono false
+  - Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80
+  * Richard Stallman ha descritto per primo la licenza GPL
 
