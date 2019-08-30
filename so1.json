@@ -1,0 +1,396 @@
+{
+  "questions": [
+    {
+      "answers": [
+        "Non c'\u00e8 modo per il sistema operativo di distinguere tra blocchi con dati e blocchi con indici",
+        "Il consolidamento permette sempre di ridurre la dimensione dell'indice",
+        "Se usato con porzioni di dimensione variabile, i blocchi indice devono contenere anche la lunghezza di ogni porzione",
+        "Nessuna delle altre opzioni \u00e8 vera"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 1,
+      "prompt": "Quale delle seguenti affermazioni sul metodo di allocazione dei file \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Richiede in input, per ogni processo p e per ogni risorsa r, il numero massimo di istanze di r che p chieder\u00e0 nel corso della sua esecuzione",
+        "I processi marcati sono quelli che non sono coinvolti in un deadlock",
+        "Se al passo 3 viene trovato un processo non marcato che soddisfi la condizione Qik <= Wk,allora c'\u00e8 un deadlock",
+        "Nessuna delle altre opzioni \u00e8 vera"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 2,
+      "prompt": "Quale delle seguenti affermazioni sull'algoritmo per il rilevamento del deadlock visto a lezione \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Senza usare n\u00e9 semafori, n\u00e9 scambio messaggi, n\u00e9 istruzioni macchina atomiche \u00e8 possibile scrivere processi che non soffrano di starvation per garantire la mutua esclusione tra 2 processi",
+        "Usando le istruzioni macchina exchange e compare_and_swap, \u00e8 possibile scrivere processi che non soffrano di starvation",
+        "Usando i semafori di qualsiasi tipo, \u00e8 possibile scrivere processi che non soffrano di starvation",
+        "Disabilitando gli interrupt, \u00e8 possibile scrivere processi che non soffrano di starvation"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 3,
+      "prompt": "Quale delle seguenti affermazioni sui meccanismi per la gestione della concorrenza \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Per selezionare un settore su una traccia di un disco magnetico a testina mobile, \u00e8 sufficiente posizionare la testina sulla giusta traccia",
+        "Un settore di un disco magnetico a testina mobile \u00e8 l'area di una corona circolare del disco stesso",
+        "Una traccia di un disco magnetico a testina mobile \u00e8 l'area compresa tra due raggi del disco stesso",
+        "Nessuna delle altre opzioni \u00e8 corretta"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 4,
+      "prompt": "Quale delle seguenti affermazioni sui dispositivi di memoria di massa \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "I dati possono essere ricavati dai metadati",
+        "I file system, che adottano il metodo journaling, mantengono un log per le operazioni di sola scrittura da effettuare, e le realizzano solo in un secondo momento",
+        "Un volume coincide sempre con un disco, quindi se un computer ha 2 dischi avr\u00e0 2 volumi",
+        "I metadati possono essere ricavati dai dati"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 5,
+      "prompt": "Quale delle seguenti affermazioni sui file system \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Dal punto di vista del processore, ogni processo esegue sempre le proprie istruzioni senza interruzioni",
+        "Dal punto di vista di ogni processo, l'esecuzione avviene in interleaving con gli altri processi",
+        "Per realizzare correttamente un process switch, il SO avr\u00e0 necessit\u00e0 di usare le informazioni sul contesto contenute nel process control block"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 6,
+      "prompt": "Si supponga che ci siano N processi attivi, giostrati da uno scheduler round-robin su un sistema monoprocessore. Quale delle seguenti affermazioni \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Per \"disponibilit\u00e0\" dell'hardware si intende la garanzia che le workstation restino sempre fisse in un posto",
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Per \"integrit\u00e0\" dei dati si intende la garanzia che essi non vengano mai modificati",
+        "Per \"confidenzialit\u00e0\" dei dati si intende la garanzia che essi non possano essere generati automaticamente"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 7,
+      "prompt": "Quale delle seguenti affermazioni sugli obiettivi di sicurezza di un sistema operativo \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Ogni directory pu\u00f2 contenere molti i-node",
+        "Per modificare una directory, un utente deve aprire il file speciale corrispondente e poi modificarlo opportunamente",
+        "Ogni directory \u00e8 un file speciale, organizzato come una lista di entry, ciascuna delle quali contiene il nome di un file ed il relativo i-node number",
+        "Ogni directory \u00e8 identificata da un i-node"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 8,
+      "prompt": "Quale delle seguenti affermazioni sugli i-node di Unix \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Per ogni processo, il resident set contiene lo stesso numero di pagine",
+        "La gestione del resident set tramite politica dinamica mira ad ampliare il numero di pagine di un processo durante l'esecuzione del processo stesso",
+        "Nessuna delle altre opzioni \u00e8 corretta",
+        "Un tipico algoritmo per il replacement scope \u00e8 quello dell'orologio"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 9,
+      "prompt": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Se uno scheduler \u00e8 non-preemptive, permette sempre ai suoi processi di essere eseguiti senza interruzioni sul processore fino al loro completamento",
+        "Se uno scheduler \u00e8 preemptive e vi \u00e8 pi\u00f9 di 1 processo ready, non \u00e8 possibile che un processo monopolizzi il processore",
+        "Se uno scheduler \u00e8 non-preemptive, \u00e8 possibile che un processo monopolizzi il processore,anche in presenza di altri processi ready",
+        "Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 10,
+      "prompt": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sulla preemption \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Una operazione atomica \u00e8 una sequenza di istruzioni macchina tale che, se un processo inizia ad eseguirla, allora finir\u00e0 di eseguirla senza interruzioni da altri processi",
+        "Il requisito di mutua esclusione prevede che un solo processo possa essere eseguire un certo segmento di codice o accedere ad una determinata risorsa",
+        "Una sezione critica \u00e8 una porzione di memoria che contiene almeno una variabile condivisa tra pi\u00f9 processi",
+        "E' possibile che 2 distinti processi chiamino la stessa funzione atomica"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 11,
+      "prompt": "Quale delle seguenti affermazioni sui termini tipici della concorrenza \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "I valori dei registri del processore fanno parte dello stato del processore",
+        "Lo stato del processore e l'immagine del processo attualmente in esecuzione su quel processore coincidono sempre",
+        "Lo stato del processore e lo stato del processo attualmente in esecuzione su quel processore coincidono sempre",
+        "Il Program Status Word contiene anche il Program Counter"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 12,
+      "prompt": "Quale delle seguenti affermazioni \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Avviene direttamente su disco, altrimenti si rischia il deadlock per interferenze con il DMA",
+        "Nessuna delle altre opzioni \u00e8 corretta",
+        "Nel caso ci siano pi\u00f9 buffer, vanno gestiti come nel problema dei lettori/scrittori",
+        "Pu\u00f2 consistere nel completare un'istruzione di output I dopo che alcune istruzioni successive ad I siano state eseguite"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 13,
+      "prompt": "Quale delle seguenti affermazioni sul buffering dell'I/O \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Sia la tabella dei segmenti che quella delle pagine di un processo contengono, in ciascuna entry, un bit per indicare se la pagina o il segmento sono stati modificati",
+        "Un indirizzo virtuale contiene anche un bit per indicare se la pagina corrispondente \u00e8 o no in memoria principale",
+        "La tabella delle pagine di un processo contiene una pagina speciale dove \u00e8 memorizzato il process control block del processo stesso",
+        "Ogni entry di una tabella delle pagine contiene un numero di pagina ed un offset"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 14,
+      "prompt": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione o segmentazione (ma non entrambi) \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Sleep, Swapped coincide con Blocked",
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Il passaggio da User Running a Kernel Running \u00e8 sempre dovuto ad una system call fatta dal processo stesso",
+        "Se un processo \u00e8 Zombie, allora \u00e8 terminato ma la sua immagine \u00e8 ancora in memoria"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 15,
+      "prompt": "Quale delle seguenti affermazioni sul modello dei processi in UNIX SVR4 System V Release 4 \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Un indirizzo di memoria principale va visto come un numero di segmento pi\u00f9 uno spiazzamento all'interno di tale segmento",
+        "Diversi segmenti possono avere diverse lunghezze",
+        "Differentemente dalla paginazione, il programmatore assembler di un processo non deve mai interagire esplicitamente con la gestione dei segmenti",
+        "In assenza di paginazione, per accedere ad un indirizzo contenuto in un segmento di un processo tale segmento dovr\u00e0 essere posizionato interamente in memoria principale"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 16,
+      "prompt": "Quale delle seguenti affermazioni sulla segmentazione della memoria \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Dimensione del file",
+        "Il gruppo cui appartiene l'utente che ha creato il file",
+        "La data di creazione del file",
+        "Autorizzazioni per l'accesso al file"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 17,
+      "prompt": "Quale delle seguenti informazioni non \u00e8 presente in una tipica entry di una directory di un file system?"
+    },
+    {
+      "answers": [
+        "Avendo le necessarie informazioni, una tipica strategia \u00e8 mantenere una giusta proporzione, stabilita a priori, tra processi I/O-bound e CPU-bound",
+        "Viene chiamato in causa esclusivamente quando viene creato un nuovo processo",
+        "Decide quali processi, tra quelli appena creati, possono essere ammessi in memoria principale per l'esecuzione",
+        "Avendo le necessarie informazioni, una tipica strategia \u00e8 ammettere in memoria principale i processi che richiedono dispositivi di I/O diversi da quelli richiesti dai processi gi\u00e0 attivi"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 18,
+      "prompt": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul long-term scheduler \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Un processo deve esplicitamente richiedere l'uso del processore, come farebbe con qualunque altra risorsa",
+        "Lo scheduler assegna il processore ai processi, cercando di massimizzare il tempo di risposta di tutti i processi",
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Il processore \u00e8 una risorsa non-preemptable"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 19,
+      "prompt": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Nel controllo di accesso discrezionale, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-oggetti",
+        "Nel controllo di accesso basato su ruoli, ad ogni ruolo \u00e8 assegnato un utente",
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Nel controllo di accesso basato su ruoli, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-ruoli-oggetti"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 20,
+      "prompt": "Quale delle seguenti affermazioni sul controllo di accesso \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Se uno scheduler \u00e8 preemptive, \u00e8 comunque possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready",
+        "Nel caso di scheduler preemptive ed in assenza di istruzioni bloccanti da eseguire, la funzione di selezione viene sempre invocata quando scade un quanto di tempo",
+        "Se la modalit\u00e0 di decisione \u00e8 preemptive, allora sar\u00e0 necessario prevedere un quanto di tempo per l'implementazione dello scheduler",
+        "Se uno scheduler deve tenere conto della priorit\u00e0, allora soffrir\u00e0 di casi di starvation"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 21,
+      "prompt": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sullo scheduling \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "La disponibilit\u00e0 (availability) di un sistema operativo consiste nel fatto che il sistema operativo deve garantire l'accesso ai dati ai soli utenti autorizzati",
+        "La disponibilit\u00e0 (availability) di un sistema operativo consiste nel fatto che devono esistere delle repository online che permettano sia di installare che di aggiornare il sistema operativo",
+        "La confidenzialit\u00e0 di un sistema operativo consiste nel fatto che il sistema operativo deve garantire l'integrit\u00e0 dei dati",
+        "La confidenzialit\u00e0 di un sistema operativo consiste nel fatto che il sistema operativo deve garantire l'accesso ai dati ai soli utenti autorizzati"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 22,
+      "prompt": "Quali delle seguenti affermazioni \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Deve minimizzare il tempo di risposta, tenendo presenti eventuali priorit\u00e0",
+        "Deve massimizzare l'uso delle risorse per unit\u00e0 di tempo, tenendo presenti eventuali priorit\u00e0",
+        "Deve servire il maggior numero di utenti possibile, tenendo presenti eventuali livelli di accesso",
+        "Deve dare accesso alle risorse in modo equo ed egualitario tra tutti i processi"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 23,
+      "prompt": "Quali delle seguenti affermazioni  sulla efficienza di un sistema operativo \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Se un processo utente pu\u00f2 disabilitare le interruzioni tramite un'istruzione macchina dedicata, allora pu\u00f2 far diminuire l'uso del processore",
+        "L'abuso della disabilitazione delle interruzioni fa diminuire la multiprogrammazione, a parit\u00e0 di numero di processi",
+        "La disabilitazione delle interruzioni impedisce la creazione di nuove interruzioni",
+        "La disabilitazione delle interruzioni non funziona su sistemi con pi\u00f9 processori o pi\u00f9 core"
+      ],
+      "correct": {
+        "index": 2
+      },
+      "number": 24,
+      "prompt": "Quale delle seguenti affermazioni sulla concorrenza tra processi o thread \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Tutti i dispositivi di I/O scambiano informazioni con la CPU in blocchi, per motivi di efficienza",
+        "Nessuna delle altre opzioni \u00e8 corretta",
+        "Il data rate confronta le velocit\u00e0 di trasferimento dati tra 2 diversi dispositivi di I/O",
+        "Ciascun dispositivo di I/O pu\u00f2 essere usato solo da un ben determinato tipo di applicazioni"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 25,
+      "prompt": "Quale delle seguenti affermazioni sui dispositivi di I/O \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Informazioni sullo stato delle risorse",
+        "Il contatore di un programma",
+        "I dati contenuti nella porzione di memoria a lui dedicata",
+        "La priorit\u00e0"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 26,
+      "prompt": "Quale dei seguenti elementi non \u00e8 una delle parti che definiscono un processo?"
+    },
+    {
+      "answers": [
+        "Ci sono tante forchette quanti filosofi",
+        "Per evitare sicuramente il deadlock, \u00e8 necessario prevedere un processo \"cameriere\" che disciplina l'accesso alla tavola",
+        "Nessuna delle altre opzioni \u00e8 vera",
+        "Ci sono meno forchette che piatti"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 27,
+      "prompt": "Quale delle seguenti affermazioni sul problema dei filosofi a cena \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "Il numero di bit di una entry di una tabella delle pagine di ultimo livello \u00e8 uguale al numero di bit di controllo pi\u00f9 il logaritmo (arrotondato all'intero superiore) del massimo numero di frame in memoria principale",
+        "Il numero di bit di un indirizzo virtuale \u00e8 necessariamente diverso a seconda che si usi una tabella delle pagine ad 1 o 2 livelli",
+        "Nessuna delle altre opzioni \u00e8 corretta",
+        "Nel caso di una tabella delle pagine a 2 livelli, viene tipicamente richiesto che tutte le tabelle delle pagine di un secondo livello entrino in una pagina"
+      ],
+      "correct": {
+        "index": 0
+      },
+      "number": 28,
+      "prompt": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera?"
+    },
+    {
+      "answers": [
+        "L'hardware deve anche usare il numero di frame ottenuto dalla tabella delle pagine per comporre, insieme con l'offset originale, l'indirizzo fisico. Tale operazione \u00e8  equivalente ad uno shift seguito da una somma",
+        "L'hardware deve anche cercare il numero di pagina nelle entries della tabella delle pagine del processo in esecuzione",
+        "L'hardware deve anche estrarre dall'indirizzo virtuale il numero di pagina virtuale; tale operazione \u00e8 equivalente ad una divisione intera",
+        "L'hardware deve anche usare il numero di pagina per accedere alla tabella delle pagine del processo in esecuzione. A tal proposito, deve conoscere l'inizio di tale tabella, che viene definito dal software (sistema operativo). Tale indirizzo pu\u00f2 cambiare durante l'esecuzione del processo: sta al sistema operativo mantenerlo aggiornato"
+      ],
+      "correct": {
+        "index": 1
+      },
+      "number": 29,
+      "prompt": "Quale delle seguenti affermazioni sulla traduzione di un indirizzo virtuale in fisico, in un sistema con memoria virtuale con paginazione (avente tabella delle pagine ad 1 livello), \u00e8 falsa?"
+    },
+    {
+      "answers": [
+        "Con l'indirizzamento diretto, se la coda dei messaggi del ricevente \u00e8 gi\u00e0 piena, il messaggio tipicamente viene ritrasmesso oppure viene perso",
+        "Con l'indirizzamento indiretto, il mittente deve sempre specificare a quale processo vuole inviare il messaggio",
+        "Con l'indirizzamento indiretto, se una mailbox \u00e8 piena, allora l'invio di ulteriori messaggi risulta in un blocco del processo mittente",
+        "Una chiamata alla receive pu\u00f2 specificare chi deve essere il mittente del messaggio affinch\u00e8 lo si possa ricevere; questo pu\u00f2 avvenire sia con l'indirizzamento diretto che con l'indirizzamento indiretto"
+      ],
+      "correct": {
+        "index": 3
+      },
+      "number": 30,
+      "prompt": "Quale delle seguenti affermazioni sullo scambio messaggi per la gestione della concorrenza \u00e8 falsa?"
+    }
+  ],
+  "title": "Quanto non lo passiamo SO1?",
+  "url": null
+}
