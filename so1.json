@@ -138,7 +138,7 @@
         "E' possibile che 2 distinti processi chiamino la stessa funzione atomica"
       ],
       "correct": {
-        "index": 3
+        "index": 2
       },
       "number": 11,
       "prompt": "Quale delle seguenti affermazioni sui termini tipici della concorrenza \u00e8 falsa?"
