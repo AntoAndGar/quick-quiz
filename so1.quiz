@@ -63,8 +63,8 @@
 11)Quale delle seguenti affermazioni sui termini tipici della concorrenza è falsa?
   - Una operazione atomica è una sequenza di istruzioni macchina tale che, se un processo inizia ad eseguirla, allora finirà di eseguirla senza interruzioni da altri processi
   - Il requisito di mutua esclusione prevede che un solo processo possa essere eseguire un certo segmento di codice o accedere ad una determinata risorsa
-  - Una sezione critica è una porzione di memoria che contiene almeno una variabile condivisa tra più processi
-  * E' possibile che 2 distinti processi chiamino la stessa funzione atomica
+  * Una sezione critica è una porzione di memoria che contiene almeno una variabile condivisa tra più processi
+  - E' possibile che 2 distinti processi chiamino la stessa funzione atomica
 
 12)Quale delle seguenti affermazioni è vera?
   * I valori dei registri del processore fanno parte dello stato del processore
